@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements Reference - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Omar Kapur</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">About Me</a></li>
+							<li><a href="generic.html">Relevant Work Experience</a></li>
+							<li class="active"><a href="elements.html">Additional AI Projects</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/omarkapur/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Posts -->
+						<section class="posts">
+							<article>
+								<header>
+									<h2><a href="#">LiveStalk<br />Tracking Cows with Drones
+									</a></h2>
+								</header>
+								<a href="https://github.com/rjenez/w251-final-project-livestalk" class="image fit"><img src="images/livestalk.png" alt="" /></a>
+								<justify><p>In the final project for the class Deep Learning in the Cloud and at the Edge, my team developed a drone-based application
+									that allowed a drone to be flown on a predetermined path over any area and perform object detection to identify cattle. As this was a 
+									proof-of-concept and we used a DJI Mavic Pro drone, we were unable to access an on-board API for model deployment and instead performed
+									the drone run and then transferred the video to a Jetson Nano. From this device, object detection was performed on the video feed and 
+									the output was sent to an AWS instance using MQTT, where it was then mapped. A simple front-end UI allows the user to see the cow locations,
+									counts, and images with annotations. YOLOv5 was used as the object detection model, and through the exploratory approach of how to best 
+									collect the data we experimented with different datasets and ultimately were able to train a model that performed with over 0.9 mAP on 
+									our holdout test set. 
+								</p></justify>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Exploring Data Augmentation for Question Answering with T5<br />
+									</a></h2>
+								</header>
+								<a href="https://github.com/omarkapur-mids/Exploring-Data-Augmentation-for-QA-with-T5" class="image fit"><img src="images/T5.png" alt="" /></a>
+								<justify><p>This project was an attempt to find ways of improving T5's performance on a difficult Question Answering task, using the DROP 
+									(Discrete Reasoning Over Paragraphs) dataset as a benchmark. We experimented with transfer learning on a variety of datasets, and 
+									 found that we could improve performance by generating our own synthetic Question Answer data. While our synthetic dataset ultimately was 
+									 not diverse enough to train the model on it's own, but by augmenting the DROP training data with our synthetic data, we were able to avoid
+									 overfitting and improve performance.	
+								</p></justify>
+							</article>
+
+							<article>
+								<header>
+									<h2><a href="#">Birdwatch<br />
+									</a></h2>
+								</header>
+								<a href="https://www.kaggle.com/c/midsw251birds2021/leaderboard" class="image fit"><img src="images/birdwatch.png" alt="" /></a>
+								<p>This project was an in-class Kaggle competition requiring accurate image classification on bird photographs in a dataset with 270 different 
+									classes of birds. Using Vision Transformers, I was able to achieve over 98% accuracy on the test set (the best performing model was SWIN). 
+									This was also achieved by applying label smoothing to the cross entropy loss function, a cosine learning rate scheduler, and  
+									stochastic gradient decent with momentum and weight decay. 
+									
+								</p>
+							</article>
+							<article>
+								<header>
+									<h2><a href="#">Flight Delay predictions<br />
+									</a></h2>
+								</header>
+								<p>For this project, we had to predict whether a flight would be at least 15 minutes delayed 2 hours before the scheduled departure using 
+									large datasets of airline flights (all US commercial flights from 2015-2019) and weather data (NOAA data 
+									collected from 2015-2019). Because of the size of the dataset, distributed computing was required (PySpark). The modeling portion of 
+									the pipeline used logistic regression as a baseline, which was improved upon using Gradient Boosted Trees and XGBoost. The computation 
+									was performed in Databricks. 
+									<br \><br \>Report notebooks:
+									<ul style="list-style-type:none;">
+										<li><a href="261_ingestion.html">Data Ingestion</a></li>
+										<li><a href="261_EDA.html">Exploratory Data Analysis</a></li>
+										<li><a href="261_CV.html">Cross Validation</a></li>
+										<li><a href="261_model.html">Modeling</a></li>
+										<li><a href="261_report.html">Report/Conclusion</a></li>
+									</ul>
+								</p>
+							</article>
+
+						</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
